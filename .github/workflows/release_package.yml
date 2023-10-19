@@ -86,7 +86,7 @@ jobs:
       # Read version changelog
       - id: get-changelog
         name: Get version changelog
-        uses: DiogoRDuarte/ghpagestest
+        uses: DiogoRDuarte/ghpagestest@main
         with:
           path-to-changelog: CHANGELOG.md
           version: ${{ env.NEW_VERSION }}
