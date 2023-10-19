@@ -7,8 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Another test
+
 ## 0.2.1 - 2023-10-19
+
 ### Added
+
 - Changelog
 - Test
 - Bumped the npm package manually
