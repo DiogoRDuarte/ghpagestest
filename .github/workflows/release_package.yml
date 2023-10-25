@@ -9,7 +9,7 @@ on:
         description: "Provide the github account name responsible for this release"
         required: true
       github-email:
-        description: ""Provide the github account email responsible for this release"
+        description: "Provide the github account email responsible for this release"
         required: true
 
 jobs:
