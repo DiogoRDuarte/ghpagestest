@@ -61,7 +61,7 @@ jobs:
 
       # Update changelog unreleased section with new version
       - name: Update changelog
-        uses: superfaceai/release-changelog-action@38646ad
+        uses: superfaceai/release-changelog-action@4bba78f5472dbbc2d0d534447a8363a1e6e27518
         with:
           path-to-changelog: CHANGELOG.md
           version: ${{ env.NEW_VERSION }}
@@ -91,7 +91,7 @@ jobs:
       # Read version changelog
       - name: Get version changelog
         id: get-changelog
-        uses: superfaceai/release-changelog-action@38646ad
+        uses: superfaceai/release-changelog-action@4bba78f5472dbbc2d0d534447a8363a1e6e27518
         with:
           path-to-changelog: CHANGELOG.md
           version: ${{ env.NEW_VERSION }}
