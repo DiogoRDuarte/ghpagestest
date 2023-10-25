@@ -5,6 +5,12 @@ on:
       release-type:
         description: "Release type (one of): patch, minor, major, prepatch, preminor, premajor, prerelease"
         required: true
+      github-name:
+        description: "Provide the github account name responsible for this release"
+        required: true
+      github-email:
+        description: ""Provide the github account email responsible for this release"
+        required: true
 
 jobs:
   release:
@@ -36,8 +42,11 @@ jobs:
       # Configure Git
       - name: Git configuration
         run: |
-          git config --global user.email "diogorduarte00@gmail.com"
-          git config --global user.name "DiogoRDuarte"
+          git config --global user.email $GITHUB_EMAIL
+          git config --global user.name $GITHUB_NAME
+        env:
+          GITHUB_NAME: ${{ github.event.inputs.github-name }}
+          GITHUB_EMAIL: ${{ github.event.inputs.github-email }}
 
       # Bump package version
       # Use tag latest
