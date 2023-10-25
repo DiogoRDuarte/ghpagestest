@@ -39,7 +39,6 @@ jobs:
           git config --global user.name $GITHUB_NAME
           git config --global user.email $GITHUB_EMAIL
         env:
-          GITHUB_ID: ${{ github.event.sender.id }}
           GITHUB_NAME: ${{ github.event.sender.login }}
           GITHUB_EMAIL: ${{ github.event.sender.id }}+${{ github.event.sender.login }}@users.noreply.github.com
 
