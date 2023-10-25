@@ -36,11 +36,10 @@ jobs:
       # Configure Git
       - name: Git configuration
         run: |
-          git config --global user.name $GITHUB_NAME
           git config --global user.email $GITHUB_EMAIL
+          git config --global user.name $GITHUB_NAME
         env:
-          GITHUB_NAME: ${{ github.event.author.login }}
-          GITHUB_EMAIL: ${{ github.event.author.email }}
+          GITHUB_NAME: ${{ github.event.sender.login }}
 
       # Bump package version
       # Use tag latest
