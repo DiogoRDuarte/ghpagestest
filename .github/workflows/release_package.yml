@@ -34,11 +34,11 @@ jobs:
         run: npm run build
 
       # Configure Git
-      - name: Git configuration
-        run: |
-          git config --global user.name $GITHUB_NAME
-        env:
-          GITHUB_NAME: ${{ github.event.sender.login }}
+      # - name: Git configuration
+      #   run: |
+      #     git config --global user.name $GITHUB_NAME
+      #   env:
+      #     GITHUB_NAME: ${{ github.event.sender.login }}
 
       # Bump package version
       # Use tag latest
