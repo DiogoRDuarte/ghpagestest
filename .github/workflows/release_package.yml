@@ -39,7 +39,7 @@ jobs:
           git config --global user.email $GITHUB_EMAIL
           git config --global user.name $GITHUB_NAME
         env:
-          GITHUB_EMAIL: ${{ github.event.release.author.email }}
+          GITHUB_EMAIL: ${{ github.event.sender.email }}
           GITHUB_NAME: ${{ github.event.sender.login }}
 
       # Bump package version
