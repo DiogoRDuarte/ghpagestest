@@ -40,10 +40,10 @@ jobs:
         run: npm run build
 
       # Configure Git
-      - name: Git configuration
-        run: |
-          git config --global user.email "${{ github.event.inputs.github-email }}"
-          git config --global user.name "${{ github.event.inputs.github-name }}"
+      # - name: Git configuration
+      #   run: |
+      #     git config --global user.email "${{ github.event.inputs.github-email }}"
+      #     git config --global user.name "${{ github.event.inputs.github-name }}"
 
       # Bump package version
       # Use tag latest
@@ -110,5 +110,5 @@ jobs:
           tag_name: ${{ env.NEW_VERSION }}
           body: ${{ steps.get-changelog.outputs.changelog }}
           prerelease: ${{ startsWith(github.event.inputs.release-type, 'pre') }}
-        # env:
-        #   GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
