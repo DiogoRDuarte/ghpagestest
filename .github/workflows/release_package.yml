@@ -41,7 +41,7 @@ jobs:
         env:
           GITHUB_ID: ${{ github.event.sender.id }}
           GITHUB_NAME: ${{ github.event.sender.login }}
-          GITHUB_EMAIL: ${{ github.event.sender.id }}${{ github.event.sender.login }}@users.noreply.github.com
+          GITHUB_EMAIL: ${{ github.event.sender.id }}+${{ github.event.sender.login }}@users.noreply.github.com
 
       # Bump package version
       # Use tag latest
