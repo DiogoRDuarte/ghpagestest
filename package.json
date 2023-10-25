@@ -1,6 +1,6 @@
 {
   "name": "ghpagestest",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
